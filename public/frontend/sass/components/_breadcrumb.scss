@@ -1,0 +1,41 @@
+// Breadcrumb
+.breadcrumb-nav {
+  background-color: #fff;
+  border-bottom: 1px solid #e7e7e7;
+  border-top: 1px solid #e7e7e7;
+  padding: 1rem 0 0.7rem;
+  margin-bottom: 3.5rem;
+}
+
+.breadcrumb {
+  margin-bottom: 0;
+  padding: 1.25rem 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.breadcrumb-item {
+  text-transform: uppercase;
+  font: 700 1rem/1.4 $font-family;
+  letter-spacing: 0.05em;
+}
+
+.breadcrumb-item+.breadcrumb-item {
+  padding-left: 1.8rem;
+}
+
+.breadcrumb-item+.breadcrumb-item:before {
+  content: '\e81a';
+  font-family: 'porto';
+  padding-right: 1.8rem;
+  font-size: 1.6rem;
+  vertical-align: middle;
+  margin-top: -.4rem;
+  color: #000;
+  font-weight: 500;
+}
+
+.breadcrumb-item a,
+.breadcrumb-item.active {
+  color: #000;
+}

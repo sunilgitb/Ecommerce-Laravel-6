@@ -1,0 +1,135 @@
+// Banners
+.banner {
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #ccc;
+
+  &.banner-cat {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    background-size: 73%;
+    background-position: 89% 8%;
+    background-repeat: no-repeat;
+    background-color: #f8f8f8;
+    margin-bottom: 0;
+    z-index: -10;
+  }
+
+  > a {
+    display: block;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: auto;
+  }
+
+  .banner-content {
+    display: inline-block;
+    padding-left: 20.6rem;
+  }
+
+  .banner-title {
+    color: black;
+    font: 700 5.37rem/1.1 $font-family;
+    letter-spacing: -.05rem;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+  }
+
+  .banner-subtitle {
+    color: #444;
+    font: 400 1.97rem/1.1 $font-family;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    margin-bottom: .4rem;
+  }
+
+  .banner-foot {
+    color: #444;
+    font-weight: 400;
+    font: 400 2.41rem/1.1 $font-family;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    margin-bottom: .4rem;
+
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+.banner-image {
+  > a {
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba($secondary-color, .3);
+      transition: all 0.3s ease;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &:hover,
+    &:focus {
+      &:after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .banner {
+    &.banner-cat {
+      height: 200px;
+    }
+    .banner-title {
+      font-size: 3.8rem;
+    }
+
+    .banner-subtitle {
+      font-size: 1.6rem;
+
+      span {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+@include mq(lg) {
+  .banner {
+    &.banner-cat {
+      height: 28.2rem;
+    }
+    .banner-title {
+      font-size: 5.3rem;
+    }
+
+    .banner-subtitle {
+      font-size: 1.97rem;
+    }
+
+    banner-foot {
+      font-size: 2.42rem;
+
+      span {
+        font-size: 2.42rem;
+      }
+    }
+  }
+}
